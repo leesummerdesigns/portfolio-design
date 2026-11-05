@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://design.louishenrich.com/sitemap.xml
