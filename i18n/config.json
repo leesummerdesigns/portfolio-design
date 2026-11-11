@@ -1,0 +1,23 @@
+{
+  "domain": "https://design.louishenrich.com",
+  "pages": {
+    "/": "/de/",
+    "/pages/about.html": "/pages/de/ueber-mich.html",
+    "/pages/projects.html": "/pages/de/projekte.html",
+    "/pages/resume.html": "/pages/de/lebenslauf.html",
+    "/pages/blog.html": "/pages/de/blog.html",
+    "/pages/blog/ai-reshaping-ux-design.html": "/pages/de/ki-veraendert-ux-design.html",
+    "/pages/blog/claude-challenges-design-systems.html": "/pages/de/claude-und-design-systeme.html",
+    "/pages/blog/design-systems-with-ai.html": "/pages/de/design-systeme-mit-ki.html",
+    "/pages/blog/product-designers-ai-first-roles.html": "/pages/de/produktdesigner-in-ki-first-rollen.html",
+    "/pages/design-system-specialist.html": "/pages/de/design-system-spezialist.html",
+    "/pages/bdrowa.html": "/pages/de/bdrowa.html",
+    "/pages/immoscout24.html": "/pages/de/immoscout24.html",
+    "/pages/rabobank.html": "/pages/de/rabobank.html",
+    "/pages/rakuten.html": "/pages/de/rakuten.html",
+    "/pages/smg.html": "/pages/de/smg.html",
+    "/pages/telekom.html": "/pages/de/telekom.html",
+    "/pages/thank-you.html": "/pages/de/danke.html"
+  },
+  "existing": []
+}
