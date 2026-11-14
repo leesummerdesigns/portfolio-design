@@ -15,10 +15,8 @@
 
 /* small mono labels */
 .gst-eyebrow,
-.gst-claim span,
 .gst-meta span,
 .gst-scale-label,
-.gst-outcomes span,
 .gst-steps span,
 .gst-built span,
 .gst-rule-label,
@@ -33,87 +31,47 @@
 
 /* --- hero ---------------------------------------------------- */
 .gst-hero {
-    padding: 56px 0 0;
+    padding: 48px 0 72px;
 }
 
-.gst-logo {
-    margin: 22px 0 0;
-    line-height: 0;
-}
-
-.gst-logo img {
-    width: 150px;
-    height: auto;
-}
-
-.gst-claim {
-    margin-top: 44px;
-}
-
-.gst-claim p {
-    margin: 0;
-}
-
-.gst-claim span {
-    display: block;
-    margin-bottom: 2px;
-}
-
-.gst-claim s,
-.gst-claim strong {
-    display: inline-block;
-    font-family: var(--font-mono);
-    font-size: clamp(38px, 9.4vw, 118px);
-    font-weight: 400;
-    line-height: 1.05;
-    letter-spacing: -0.03em;
-    white-space: nowrap;
-}
-
-.gst-claim s {
-    color: #b9b5ab;
-    text-decoration: line-through;
-    text-decoration-thickness: 0.05em;
-    text-decoration-color: var(--gst-ink);
-}
-
-.gst-claim-after {
-    padding-top: 26px;
-}
-
-.gst-claim-after span {
-    color: var(--gst-ink);
-}
-
-.gst-claim strong {
-    color: var(--gst-ink);
-    background: linear-gradient(180deg, transparent 62%, var(--gst-amber) 62%, var(--gst-amber) 92%, transparent 92%);
-}
-
-.gst-hero-bottom {
+.gst-hero-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 32px;
-    margin-top: 48px;
+    align-items: center;
+}
+
+.gst-hero-grid > * {
+    min-width: 0;
+}
+
+.gst-title {
+    margin: 14px 0 20px;
+    font-family: var(--font-mono);
+    font-size: clamp(32px, 4vw, 44px);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: 0;
+    color: var(--gst-ink);
 }
 
 .gst-lede {
-    max-width: 620px;
+    max-width: 540px;
     margin: 0;
     font-family: var(--font-body);
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 300;
-    line-height: 1.65;
+    line-height: 1.75;
     color: var(--gst-ink);
 }
 
 .gst-meta {
-    align-self: start;
+    margin-top: 32px;
     border-top: 1px solid var(--gst-line);
 }
 
 .gst-meta div {
-    padding: 13px 0;
+    padding: 12px 0;
     border-bottom: 1px solid var(--gst-line);
     font-family: var(--font-body);
     font-size: 15px;
@@ -124,7 +82,7 @@
 
 .gst-meta span {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 /* --- mockups: straight on the page, no panel ------------------- */
@@ -152,27 +110,26 @@
     color: var(--gst-muted);
 }
 
-.gst-shot--hero {
-    margin-top: 24px;
-    padding-bottom: 72px;
-}
-
 /* --- band: where the hours go --------------------------------- */
 .gst-band {
-    padding: 88px 0 96px;
+    padding: 64px 0 68px;
     background: var(--gst-ink);
     color: var(--gst-paper);
 }
 
-.gst-band-head {
+.gst-band-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 44px;
+    align-items: center;
+}
+
+.gst-band-grid > * {
+    min-width: 0;
 }
 
 .gst-band .cs-section-header {
-    margin-bottom: 0;
-    align-self: start;
+    margin-bottom: 18px;
 }
 
 .gst-band .cs-section-line {
@@ -182,45 +139,71 @@
 .gst-band h2 {
     margin: 0;
     font-family: var(--font-mono);
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 400;
     line-height: 1.2;
     color: var(--gst-paper);
 }
 
-.gst-band-head p {
+.gst-band-copy > p {
     margin: 0;
     font-family: var(--font-body);
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 300;
     line-height: 1.75;
     color: #c9d1d9;
 }
 
+.gst-outcomes {
+    margin-top: 28px;
+}
+
+.gst-outcomes > div {
+    padding: 14px 0;
+    border-top: 1px solid rgba(244, 243, 239, 0.22);
+}
+
+.gst-outcomes h3 {
+    margin: 0 0 2px;
+    font-family: var(--font-mono);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--gst-paper);
+}
+
+.gst-outcomes p {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #c9d1d9;
+}
+
 .gst-scale {
-    margin-top: 56px;
+    max-width: 320px;
 }
 
 .gst-scale-label {
-    margin: 0 0 12px;
-    font-size: 14px;
+    margin: 0 0 10px;
     color: var(--gst-paper);
 }
 
 .gst-scale-label span {
-    margin-right: 10px;
+    margin-right: 8px;
     color: #8fa0b1;
 }
 
 .gst-scale-label--after {
-    margin-top: 34px;
+    margin-top: 24px;
     color: var(--gst-amber);
 }
 
 .gst-squares {
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    gap: 5px;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 4px;
 }
 
 .gst-squares i {
@@ -231,7 +214,7 @@
 
 .gst-squares .gst-sq-range {
     background: transparent;
-    box-shadow: inset 0 0 0 1.5px rgba(244, 243, 239, 0.55);
+    box-shadow: inset 0 0 0 1.5px rgba(244, 243, 239, 0.5);
 }
 
 .gst-squares .gst-sq-gestalt {
@@ -239,50 +222,12 @@
 }
 
 .gst-scale-note {
-    max-width: 560px;
-    margin: 22px 0 0;
+    margin: 16px 0 0;
     font-family: var(--font-body);
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 300;
-    line-height: 1.6;
+    line-height: 1.55;
     color: #8fa0b1;
-}
-
-.gst-outcomes {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0;
-    margin-top: 64px;
-}
-
-.gst-outcomes > div {
-    padding: 22px 0 24px;
-    border-top: 1px solid rgba(244, 243, 239, 0.28);
-}
-
-.gst-outcomes span {
-    display: block;
-    margin-bottom: 14px;
-    color: var(--gst-amber);
-}
-
-.gst-outcomes h3 {
-    margin: 0 0 8px;
-    font-family: var(--font-mono);
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 1.2;
-    color: var(--gst-paper);
-}
-
-.gst-outcomes p {
-    max-width: 320px;
-    margin: 0;
-    font-family: var(--font-body);
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1.65;
-    color: #c9d1d9;
 }
 
 /* --- sections -------------------------------------------------- */
@@ -563,28 +508,16 @@
 /* --- wider screens ---------------------------------------------- */
 @media (min-width: 768px) {
     .gst-hero {
-        padding-top: 72px;
+        padding: 64px 0 88px;
     }
 
-    .gst-hero-bottom {
-        grid-template-columns: 1.45fr 1fr;
-        gap: 72px;
-        margin-top: 56px;
-    }
-
-    .gst-band-head {
-        grid-template-columns: 1fr 1.45fr;
+    .gst-band-grid {
+        grid-template-columns: 320px minmax(0, 1fr);
         gap: 72px;
     }
 
-    .gst-squares {
-        grid-template-columns: repeat(18, 1fr);
-        gap: 6px;
-    }
-
-    .gst-outcomes {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 40px;
+    .gst-scale {
+        order: -1;
     }
 
     .gst-steps {
@@ -638,6 +571,15 @@
 }
 
 @media (min-width: 1024px) {
+    .gst-hero-grid {
+        grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+        gap: 40px;
+    }
+
+    .gst-band-grid {
+        gap: 104px;
+    }
+
     .gst-instruments {
         grid-template-columns: 0.62fr 1.38fr;
         gap: 72px;
