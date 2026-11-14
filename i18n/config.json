@@ -17,6 +17,7 @@
     "/pages/rakuten.html": "/pages/de/rakuten.html",
     "/pages/smg.html": "/pages/de/smg.html",
     "/pages/telekom.html": "/pages/de/telekom.html",
+    "/pages/gestalt.html": "/pages/de/gestalt.html",
     "/pages/thank-you.html": "/pages/de/danke.html"
   },
   "existing": []

@@ -24,7 +24,7 @@
 
 - [Cortex](https://louishenrich.com/pages/cortex.html): open-source macOS app that gives AI assistants a shared memory from Markdown notes
 - [BloodLog](https://louishenrich.com/pages/bloodlog.html): iOS app on the App Store that explains lab results with AI
-- [Gestalt](https://louishenrich.com/pages/adhd-diagnostics.html): ADHD diagnostic workflow tool for physicians, in development
+- [Gestalt](https://design.louishenrich.com/pages/gestalt.html): ADHD diagnostics platform for clinicians, researched, designed and built from zero, in development
 
 ## Pages
 
