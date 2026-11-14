@@ -1,38 +1,25 @@
 /* ============================================================
    Gestalt case study
    Loaded only by pages/gestalt.html, after style.css and theme.css.
-   Shared case-study pieces (cs-section, cs-title, ...) stay as they
-   are; everything here is prefixed gst-.
+   Everything here is prefixed gst- or scoped to .gestalt-case-study.
    ============================================================ */
 
 .gestalt-case-study {
-    --gst-ink: #1b2430;
+    --gst-ink: #18212b;
     --gst-blue: #4a6d8c;
-    --gst-violet: #6d4fc2;
-    --gst-amber: #c98a1b;
-    --gst-mist: #e7edf2;
-    --gst-mist-deep: #dbe4ec;
-    --gst-night: #10161f;
-    --gst-line: rgba(27, 36, 48, 0.14);
+    --gst-amber: #f2a93b;
+    --gst-paper: #f4f3ef;
+    --gst-muted: #8b8a85;
+    --gst-line: rgba(24, 33, 43, 0.16);
 }
 
-/* --- hero ---------------------------------------------------- */
-.gst-hero {
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-.gst-hero-top {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 32px;
-}
-
+/* small mono labels */
 .gst-eyebrow,
+.gst-claim span,
 .gst-meta span,
-.gst-stage figcaption,
-.gst-fig,
-.gst-compare-head,
+.gst-scale-label,
+.gst-outcomes span,
+.gst-steps span,
 .gst-built span,
 .gst-rule-label,
 .gst-e2e-labels {
@@ -41,35 +28,92 @@
     font-weight: 400;
     letter-spacing: 1.4px;
     text-transform: uppercase;
-    color: var(--color-gray-dark);
+    color: var(--gst-muted);
 }
 
-.gestalt-case-study .cs-title {
-    margin-top: 16px;
+/* --- hero ---------------------------------------------------- */
+.gst-hero {
+    padding: 56px 0 0;
 }
 
-.gestalt-case-study .cs-subtitle {
-    max-width: 640px;
-    font-size: clamp(32px, 4.6vw, 46px);
-    line-height: 1.15;
-    letter-spacing: 0;
-    word-spacing: 0;
+.gst-logo {
+    margin: 22px 0 0;
+    line-height: 0;
 }
 
-.gestalt-case-study .cs-description {
-    max-width: 600px;
-    margin-bottom: 0;
+.gst-logo img {
+    width: 150px;
+    height: auto;
+}
+
+.gst-claim {
+    margin-top: 44px;
+}
+
+.gst-claim p {
+    margin: 0;
+}
+
+.gst-claim span {
+    display: block;
+    margin-bottom: 2px;
+}
+
+.gst-claim s,
+.gst-claim strong {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: clamp(38px, 9.4vw, 118px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    white-space: nowrap;
+}
+
+.gst-claim s {
+    color: #b9b5ab;
+    text-decoration: line-through;
+    text-decoration-thickness: 0.05em;
+    text-decoration-color: var(--gst-ink);
+}
+
+.gst-claim-after {
+    padding-top: 26px;
+}
+
+.gst-claim-after span {
+    color: var(--gst-ink);
+}
+
+.gst-claim strong {
+    color: var(--gst-ink);
+    background: linear-gradient(180deg, transparent 62%, var(--gst-amber) 62%, var(--gst-amber) 92%, transparent 92%);
+}
+
+.gst-hero-bottom {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.gst-lede {
+    max-width: 620px;
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 1.65;
+    color: var(--gst-ink);
 }
 
 .gst-meta {
-    display: grid;
-    gap: 0;
-    align-content: end;
+    align-self: start;
     border-top: 1px solid var(--gst-line);
 }
 
 .gst-meta div {
-    padding: 14px 0;
+    padding: 13px 0;
     border-bottom: 1px solid var(--gst-line);
     font-family: var(--font-body);
     font-size: 15px;
@@ -80,333 +124,367 @@
 
 .gst-meta span {
     display: block;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
 }
 
-/* --- stage: the tinted panel a mockup sits on ------------------ */
-.gst-stage {
-    position: relative;
+/* --- mockups: straight on the page, no panel ------------------- */
+.gst-shot {
     margin: 0;
-    padding: 56px 16px 20px;
-    border-radius: 8px;
-    background:
-        radial-gradient(circle at 1px 1px, rgba(74, 109, 140, 0.22) 1px, transparent 1.5px) 0 0 / 22px 22px,
-        linear-gradient(165deg, var(--gst-mist) 0%, var(--gst-mist-deep) 100%);
-    overflow: hidden;
 }
 
-.gst-stage img {
+.gst-shot img,
+.gst-devices img,
+.gst-system img,
+.gst-cards img {
     display: block;
     width: 100%;
     height: auto;
-    max-width: 1000px;
-    margin: 0 auto;
 }
 
-.gst-stage figcaption,
-.gst-fig {
-    position: absolute;
-    top: 20px;
-    left: 22px;
-    right: 22px;
-    margin: 0;
-    color: var(--gst-blue);
-}
-
-.gst-stage figcaption span,
-.gst-fig span {
-    display: inline-block;
-    margin-right: 10px;
-    padding: 2px 7px;
-    border: 1px solid currentColor;
-}
-
-.gst-stage--hero {
-    margin-top: 48px;
-}
-
-/* --- facts under the hero ------------------------------------- */
-.gst-facts {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    margin-top: 12px;
-}
-
-.gst-facts div {
-    padding: 18px;
-    border: 1px solid var(--color-gray);
-    background: var(--color-white);
+.gst-shot figcaption,
+.gst-devices figcaption {
+    margin-top: 2px;
     font-family: var(--font-body);
     font-size: 14px;
-    font-weight: 400;
-    line-height: 1.45;
-    color: var(--gst-ink);
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--gst-muted);
 }
 
-.gst-facts strong {
-    display: block;
-    margin-bottom: 6px;
+.gst-shot--hero {
+    margin-top: 24px;
+    padding-bottom: 72px;
+}
+
+/* --- band: where the hours go --------------------------------- */
+.gst-band {
+    padding: 88px 0 96px;
+    background: var(--gst-ink);
+    color: var(--gst-paper);
+}
+
+.gst-band-head {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.gst-band .cs-section-header {
+    margin-bottom: 0;
+    align-self: start;
+}
+
+.gst-band .cs-section-line {
+    background: var(--gst-amber);
+}
+
+.gst-band h2 {
+    margin: 0;
     font-family: var(--font-mono);
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 400;
-    line-height: 1;
-    color: var(--gst-blue);
+    line-height: 1.2;
+    color: var(--gst-paper);
+}
+
+.gst-band-head p {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.75;
+    color: #c9d1d9;
+}
+
+.gst-scale {
+    margin-top: 56px;
+}
+
+.gst-scale-label {
+    margin: 0 0 12px;
+    font-size: 14px;
+    color: var(--gst-paper);
+}
+
+.gst-scale-label span {
+    margin-right: 10px;
+    color: #8fa0b1;
+}
+
+.gst-scale-label--after {
+    margin-top: 34px;
+    color: var(--gst-amber);
+}
+
+.gst-squares {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 5px;
+}
+
+.gst-squares i {
+    display: block;
+    aspect-ratio: 1;
+    background: var(--gst-paper);
+}
+
+.gst-squares .gst-sq-range {
+    background: transparent;
+    box-shadow: inset 0 0 0 1.5px rgba(244, 243, 239, 0.55);
+}
+
+.gst-squares .gst-sq-gestalt {
+    background: var(--gst-amber);
+}
+
+.gst-scale-note {
+    max-width: 560px;
+    margin: 22px 0 0;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #8fa0b1;
+}
+
+.gst-outcomes {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-top: 64px;
+}
+
+.gst-outcomes > div {
+    padding: 22px 0 24px;
+    border-top: 1px solid rgba(244, 243, 239, 0.28);
+}
+
+.gst-outcomes span {
+    display: block;
+    margin-bottom: 14px;
+    color: var(--gst-amber);
+}
+
+.gst-outcomes h3 {
+    margin: 0 0 8px;
+    font-family: var(--font-mono);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--gst-paper);
+}
+
+.gst-outcomes p {
+    max-width: 320px;
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.65;
+    color: #c9d1d9;
 }
 
 /* --- sections -------------------------------------------------- */
 .gestalt-case-study .cs-section {
-    padding: 76px 0;
+    padding: 96px 0 0;
+    border-bottom: none;
+}
+
+.gestalt-case-study .cs-section:last-of-type {
+    padding-bottom: 96px;
+}
+
+.gestalt-case-study .cs-section-header {
+    margin-bottom: 22px;
+}
+
+.gestalt-case-study .cs-section h2 {
+    font-size: 32px;
+    line-height: 1.2;
+    color: var(--gst-ink);
 }
 
 .gestalt-case-study .cs-intro-text {
-    max-width: 760px;
+    max-width: 700px;
+    margin-bottom: 0;
     font-size: 17px;
+    line-height: 1.75;
 }
 
 .gestalt-case-study .cs-section h3 {
     margin: 0 0 6px;
     font-family: var(--font-mono);
-    font-size: 19px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 1.3;
     color: var(--gst-ink);
+}
+
+.gestalt-case-study .cs-section p {
+    font-size: 16px;
+    line-height: 1.7;
 }
 
 .gestalt-case-study .cs-section p:last-child {
     margin-bottom: 0;
 }
 
-/* --- paper vs Gestalt ----------------------------------------- */
-.gst-compare {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border: 1px solid var(--color-gray);
-    background: var(--color-white);
-}
-
-.gst-compare > div {
-    padding: 16px 18px;
-    border-top: 1px solid var(--color-gray);
-    font-family: var(--font-body);
-    font-size: 15px;
-    line-height: 1.45;
-}
-
-.gst-compare > .gst-compare-head {
-    border-top: none;
-    padding-top: 14px;
-    padding-bottom: 14px;
-}
-
-.gst-compare-old {
-    font-weight: 300;
-    color: #77736c;
-}
-
-.gst-compare-new {
-    border-left: 1px solid var(--color-gray);
-    background: rgba(74, 109, 140, 0.07);
-    font-weight: 400;
-    color: var(--gst-ink);
-}
-
-.gst-compare-head.gst-compare-new {
-    color: var(--gst-blue);
-}
-
-/* --- flow: steps and phones ------------------------------------ */
-.gst-flow {
+/* --- how a case runs ------------------------------------------- */
+.gst-steps {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 40px;
-    align-items: center;
-}
-
-.gst-steps {
+    gap: 0;
     list-style: none;
-    margin: 0;
+    margin: 44px 0 0;
     padding: 0;
 }
 
 .gst-steps li {
-    display: grid;
-    grid-template-columns: 44px 1fr;
-    gap: 16px;
-    padding: 20px 0;
+    padding: 20px 0 22px;
     border-top: 1px solid var(--gst-line);
 }
 
-.gst-steps li:last-child {
-    padding-bottom: 0;
-}
-
-.gst-steps li > span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border: 1px solid var(--gst-blue);
-    border-radius: 50%;
-    font-family: var(--font-mono);
-    font-size: 14px;
+.gst-steps span {
+    display: block;
+    margin-bottom: 12px;
     color: var(--gst-blue);
 }
 
-.gst-stage--phones {
-    padding-bottom: 36px;
+.gst-devices {
+    margin: 40px 0 0;
 }
 
-.gst-phones {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
+.gst-devices-stage {
+    position: relative;
 }
 
-.gst-phones img {
-    width: 46%;
-    max-width: 270px;
+.gst-devices .gst-devices-phone {
+    width: 44%;
+    max-width: 210px;
+    margin: -8% auto 0;
+    position: relative;
+}
+
+/* --- one graphic per instrument --------------------------------- */
+.gst-instruments {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 44px;
+}
+
+.gst-instruments > * {
+    min-width: 0;
+}
+
+.gst-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px 28px;
+}
+
+.gst-cards figure {
     margin: 0;
 }
 
-.gst-phones img:last-child {
-    margin-top: 44px;
+.gst-cards img {
+    filter: drop-shadow(0 10px 22px rgba(24, 33, 43, 0.10));
 }
 
-/* --- notes under the findings overview ------------------------- */
-.gst-notes {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 12px;
-    margin: 12px 0;
+.gst-cards figcaption {
+    margin-top: 18px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--color-text);
 }
 
-.gst-notes > div {
-    padding: 22px;
-    border: 1px solid var(--color-gray);
-    background: var(--color-white);
-}
-
-.gst-dot {
+.gst-cards figcaption strong {
     display: block;
-    width: 28px;
-    height: 12px;
-    margin-bottom: 14px;
-    border-radius: 6px;
+    margin-bottom: 2px;
+    font-family: var(--font-mono);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--gst-ink);
 }
 
-.gst-dot--ink {
-    background: var(--gst-ink);
+.gst-swatch {
+    display: block;
+    width: 32px;
+    height: 6px;
+    margin-bottom: 12px;
 }
 
-.gst-dot--pair {
-    background: linear-gradient(90deg, var(--gst-blue) 50%, var(--gst-violet) 50%);
-}
-
-.gst-dot--warn {
-    background: var(--gst-amber);
-}
+.gst-swatch--caars-self { background: #86a5b9; }
+.gst-swatch--caars-observer { background: #6f4cc5; }
+.gst-swatch--wurs { background: #7a7e9c; }
+.gst-swatch--diva { background: #5c7e97; }
 
 .gst-pair {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 12px;
-    margin-bottom: 12px;
+    gap: 24px;
+    margin-top: 56px;
 }
 
-.gst-stage--small {
-    padding: 56px 8px 8px;
-}
-
-/* --- dark stage ------------------------------------------------- */
-.gst-stage--dark {
+.gst-system {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 8px;
     align-items: center;
-    padding: 28px 16px 16px;
-    background:
-        radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.09) 1px, transparent 1.5px) 0 0 / 22px 22px,
-        linear-gradient(165deg, #1a2330 0%, var(--gst-night) 100%);
+    margin-top: 56px;
 }
 
-.gst-stage--dark > * {
+.gst-system > * {
     min-width: 0;
-}
-
-.gst-dark-copy {
-    padding: 0 8px;
-}
-
-.gst-stage--dark .gst-fig {
-    position: static;
-    margin-bottom: 22px;
-    color: #9fb6ca;
-}
-
-.gestalt-case-study .gst-stage--dark h3 {
-    font-size: 24px;
-    color: #fff;
-}
-
-.gestalt-case-study .gst-stage--dark p:not(.gst-fig) {
-    max-width: 380px;
-    color: #c5cfd9;
 }
 
 /* --- rules: data and AI ---------------------------------------- */
 .gst-rules {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 0 56px;
+    margin-top: 44px;
 }
 
 .gst-rule {
     display: grid;
-    grid-template-columns: 40px 1fr;
+    grid-template-columns: 32px 1fr;
     gap: 16px;
-    padding: 24px;
-    border: 1px solid var(--color-gray);
-    background: var(--color-white);
+    padding: 24px 0;
+    border-top: 1px solid var(--gst-line);
 }
 
 .gst-rule > .material-symbols-outlined {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: rgba(74, 109, 140, 0.1);
-    font-size: 22px;
+    font-size: 26px;
     color: var(--gst-blue);
 }
 
 .gst-rule--lead {
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
     padding: 32px;
-    border-color: var(--gst-ink);
+    border-top: none;
     background: var(--gst-ink);
 }
 
 .gst-rule--lead .gst-rule-label {
-    margin-bottom: 14px;
-    color: #9fb6ca;
+    margin-bottom: 16px;
+    color: var(--gst-amber);
 }
 
 .gestalt-case-study .gst-rule--lead h3 {
-    font-size: 30px;
-    line-height: 1.15;
+    font-size: clamp(30px, 3.4vw, 40px);
+    line-height: 1.1;
     color: #fff;
 }
 
 .gestalt-case-study .gst-rule--lead p {
-    max-width: 360px;
-    margin-top: 8px;
-    margin-bottom: 0;
-    color: #c5cfd9;
+    max-width: 340px;
+    margin: 10px 0 0;
+    color: #c9d1d9;
 }
 
 .gst-e2e {
@@ -414,7 +492,7 @@
     grid-template-columns: 52px 1fr 52px;
     align-items: center;
     margin-top: auto;
-    padding-top: 36px;
+    padding-top: 40px;
 }
 
 .gst-e2e-node {
@@ -432,8 +510,8 @@
     position: relative;
     display: flex;
     justify-content: center;
-    border-top: 1px dashed rgba(255, 255, 255, 0.45);
     height: 0;
+    border-top: 1px dashed rgba(255, 255, 255, 0.45);
 }
 
 .gst-e2e-line .material-symbols-outlined {
@@ -445,7 +523,7 @@
     width: 34px;
     height: 34px;
     border-radius: 50%;
-    background: #fff;
+    background: var(--gst-amber);
     font-size: 19px;
     color: var(--gst-ink);
 }
@@ -454,13 +532,14 @@
     display: flex;
     justify-content: space-between;
     margin-top: 12px;
-    color: #9fb6ca;
+    color: #8fa0b1;
 }
 
-/* --- built from zero ------------------------------------------- */
+/* --- what I did -------------------------------------------------- */
 .gst-built {
     display: grid;
     grid-template-columns: 1fr;
+    margin-top: 44px;
     border-top: 1px solid var(--gst-ink);
 }
 
@@ -476,60 +555,81 @@
 }
 
 .gestalt-case-study .gst-status {
-    max-width: 760px;
-    margin-top: 40px;
-    padding-left: 18px;
-    border-left: 2px solid var(--gst-blue);
-}
-
-.gst-status strong {
-    font-weight: 700;
+    max-width: 700px;
+    margin-top: 44px;
+    color: var(--gst-muted);
 }
 
 /* --- wider screens ---------------------------------------------- */
 @media (min-width: 768px) {
-    .gst-hero-top {
-        grid-template-columns: 1.5fr 1fr;
-        gap: 56px;
-        align-items: end;
+    .gst-hero {
+        padding-top: 72px;
     }
 
-    .gst-stage {
-        padding: 52px 40px 28px;
+    .gst-hero-bottom {
+        grid-template-columns: 1.45fr 1fr;
+        gap: 72px;
+        margin-top: 56px;
     }
 
-    .gst-stage--small {
-        padding: 52px 14px 12px;
+    .gst-band-head {
+        grid-template-columns: 1fr 1.45fr;
+        gap: 72px;
     }
 
-    .gst-facts {
-        grid-template-columns: repeat(4, 1fr);
+    .gst-squares {
+        grid-template-columns: repeat(18, 1fr);
+        gap: 6px;
     }
 
-    .gst-notes {
+    .gst-outcomes {
         grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    .gst-steps {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    .gst-devices-stage {
+        padding-right: 9%;
+    }
+
+    .gst-devices .gst-devices-phone {
+        position: absolute;
+        right: 0;
+        bottom: 5%;
+        width: 21%;
+        max-width: none;
+        margin: 0;
+    }
+
+    .gst-cards {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .gst-pair {
         grid-template-columns: 1fr 1fr;
     }
 
-    .gst-stage--dark {
-        grid-template-columns: 0.7fr 1.3fr;
-        padding: 40px 24px 28px 40px;
+    .gst-system {
+        grid-template-columns: 0.6fr 1.4fr;
+        gap: 40px;
     }
 
     .gst-rules {
-        grid-template-columns: 0.85fr 1.15fr;
+        grid-template-columns: 0.9fr 1.1fr;
     }
 
     .gst-rule--lead {
         grid-row: span 3;
+        margin-bottom: 0;
     }
 
     .gst-built {
         grid-template-columns: repeat(4, 1fr);
-        gap: 28px;
+        gap: 32px;
     }
 
     .gst-built > div {
@@ -538,8 +638,24 @@
 }
 
 @media (min-width: 1024px) {
-    .gst-flow {
-        grid-template-columns: 1fr 1fr;
-        gap: 64px;
+    .gst-instruments {
+        grid-template-columns: 0.62fr 1.38fr;
+        gap: 72px;
     }
+
+    .gst-instruments-head {
+        position: sticky;
+        top: 120px;
+        align-self: start;
+    }
+}
+
+/* headline next to the section rule: keep the rule on the first line when it wraps */
+.gestalt-case-study .cs-section-header {
+    align-items: flex-start;
+}
+
+.gestalt-case-study .cs-section-line {
+    flex-shrink: 0;
+    margin-top: 19px;
 }

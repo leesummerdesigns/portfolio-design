@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestalt Case Study: ADHD Diagnostics Platform | Louis Henrich</title>
-    <meta name="description" content="Case study for Gestalt, an ADHD diagnostics platform for clinicians. Researched, designed and built from zero by Louis Henrich, with a professor from Harvard and ETH Zurich.">
+    <title>Gestalt Case Study: ADHD Diagnosis in Minutes | Louis Henrich</title>
+    <meta name="description" content="Gestalt cuts the work for one ADHD diagnosis from 18 to 30 hours to 15 to 20 minutes. Researched, designed and built by Louis Henrich with a professor from Harvard and researchers from ETH Zurich.">
     <meta name="author" content="Louis Henrich">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://design.louishenrich.com/pages/gestalt.html">
@@ -13,16 +13,16 @@
     <link rel="alternate" hreflang="x-default" href="https://design.louishenrich.com/pages/gestalt.html">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://design.louishenrich.com/pages/gestalt.html">
-    <meta property="og:title" content="Gestalt Case Study: ADHD Diagnostics Platform | Louis Henrich">
-    <meta property="og:description" content="An ADHD diagnostics platform for clinicians, researched, designed and built from zero.">
+    <meta property="og:title" content="Gestalt Case Study: ADHD Diagnosis in Minutes | Louis Henrich">
+    <meta property="og:description" content="An ADHD diagnostics platform that cuts the work per diagnosis from 18 to 30 hours to 15 to 20 minutes.">
     <meta property="og:image" content="https://design.louishenrich.com/images/louis_pf_web3.jpg">
     <meta property="og:site_name" content="Louis Henrich">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "CreativeWork",
-      "name": "Gestalt Case Study: ADHD Diagnostics Platform",
-      "description": "Case study for Gestalt, an ADHD diagnostics platform for clinicians, researched, designed and built from zero by Louis Henrich.",
+      "name": "Gestalt Case Study: ADHD Diagnosis in Minutes",
+      "description": "Case study for Gestalt, an ADHD diagnostics platform that cuts the work per diagnosis from 18 to 30 hours to 15 to 20 minutes.",
       "url": "https://design.louishenrich.com/pages/gestalt.html",
       "image": "https://design.louishenrich.com/images/louis_pf_web3.jpg",
       "author": { "@id": "https://design.louishenrich.com/#louis-henrich" },
@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="../css/theme.css?v=2">
     <link rel="stylesheet" href="../css/lang-switch.css?v=2">
     <link rel="stylesheet" href="../css/case-study-footer.css?v=2">
-    <link rel="stylesheet" href="../css/gestalt.css?v=1">
+    <link rel="stylesheet" href="../css/gestalt.css?v=2">
     <link rel="icon" type="image/png" href="../images/favico_lh.png">
 </head>
 <body>
@@ -67,179 +67,175 @@
 
     <main class="case-study-page gestalt-case-study">
         <div class="container">
-            <header class="cs-header cs-header-hero gst-hero">
-                <div class="gst-hero-top">
-                    <div class="gst-hero-copy">
-                        <p class="gst-eyebrow">Product design case study · Clinical software, built from zero</p>
-                        <h1 class="cs-title">Gestalt</h1>
-                        <p class="cs-subtitle">From paper questionnaires to one clear picture</p>
-                        <p class="cs-description">Gestalt is a diagnostics platform for clinicians who assess ADHD in adults. I researched, designed and built the whole product, working closely with a professor from Harvard and ETH Zurich.</p>
-                    </div>
+            <header class="gst-hero">
+                <p class="gst-eyebrow">Product design case study · Clinical software</p>
+                <h1 class="gst-logo"><img src="../images/gestalt-logo.svg" alt="Gestalt" width="364" height="157"></h1>
+
+                <div class="gst-claim">
+                    <p class="gst-claim-before"><span>One ADHD diagnosis on paper</span><s>18 to 30 hours</s></p>
+                    <p class="gst-claim-after"><span>The same diagnosis with Gestalt</span><strong>15 to 20 minutes</strong></p>
+                </div>
+
+                <div class="gst-hero-bottom">
+                    <p class="gst-lede">A clinician spends 18 to 30 hours on a single ADHD diagnosis, and most of that time goes into paperwork. Gestalt cuts the work to 15 to 20 minutes per patient. Clinics can take on more patients, and their waiting lists shrink dramatically.</p>
                     <div class="gst-meta">
                         <div>
                             <span>Role</span>
-                            Research, product design and full-stack development, from the first interview to the running app
+                            Research, product design and development. I built the full app.
                         </div>
                         <div>
-                            <span>Collaboration</span>
-                            Developed closely with a professor from Harvard and ETH Zurich
+                            <span>With</span>
+                            A professor from Harvard and researchers from ETH Zurich
                         </div>
                         <div>
                             <span>Status</span>
-                            In development, private test phase with clinicians
+                            In development, in a private test with clinicians
                         </div>
                     </div>
                 </div>
 
-                <figure class="gst-stage gst-stage--hero">
-                    <figcaption><span>Fig. 01</span> Case list: every patient, every form and the clinician's next step</figcaption>
-                    <img loading="eager" decoding="async" fetchpriority="high" width="2000" height="1320" src="../images/gestalt/gestalt-cases.webp" alt="Gestalt case list on a laptop, showing patients, form progress and next steps">
+                <figure class="gst-shot gst-shot--hero">
+                    <img loading="eager" decoding="async" fetchpriority="high" width="2000" height="1320" src="../images/gestalt/gestalt-findings.webp" alt="Gestalt findings overview on a laptop with result cards for four instruments">
+                    <figcaption>Findings overview: every result of one case on a single screen</figcaption>
                 </figure>
+            </header>
+        </div>
 
-                <div class="gst-facts">
+        <section class="gst-band">
+            <div class="container">
+                <div class="gst-band-head">
+                    <div class="cs-section-header">
+                        <span class="cs-section-line"></span>
+                        <h2>Where the hours go</h2>
+                    </div>
+                    <p>An adult ADHD assessment still runs on paper. The clinician sends questionnaires to the patient and waits until they come back. Then every answer is added up by hand and looked up in printed norm tables. As long as that takes 18 to 30 hours per person, a clinician cannot take on more patients.</p>
+                </div>
+
+                <div class="gst-scale">
+                    <p class="gst-scale-label"><span>On paper</span> 18 to 30 hours</p>
+                    <div class="gst-squares" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i><i class="gst-sq-range"></i></div>
+                    <p class="gst-scale-label gst-scale-label--after"><span>With Gestalt</span> 15 to 20 minutes</p>
+                    <div class="gst-squares" aria-hidden="true"><i class="gst-sq-gestalt"></i></div>
+                    <p class="gst-scale-note">One square is 20 minutes of a clinician's time. The outlined squares are the range between 18 and 30 hours.</p>
+                </div>
+
+                <div class="gst-outcomes">
                     <div>
-                        <strong>3</strong>
-                        people per case: clinician, patient and relative
+                        <span>01</span>
+                        <h3>More patients per clinician</h3>
+                        <p>The hours that used to go into paperwork are free for patients.</p>
                     </div>
                     <div>
-                        <strong>5</strong>
-                        languages for patients
+                        <span>02</span>
+                        <h3>Shorter waiting lists</h3>
+                        <p>A clinic that finishes more diagnoses each week shrinks its waiting list dramatically.</p>
                     </div>
                     <div>
-                        <strong>20</strong>
-                        automated test suites, from scoring to access rules
-                    </div>
-                    <div>
-                        <strong>0</strong>
-                        diagnoses made by software
+                        <span>03</span>
+                        <h3>Faster, accurate diagnoses</h3>
+                        <p>Gestalt connects the dots between the instruments, so the clinician sees the full picture sooner.</p>
                     </div>
                 </div>
-            </header>
+            </div>
+        </section>
 
+        <div class="container">
             <section class="cs-section">
                 <div class="cs-section-header">
                     <span class="cs-section-line"></span>
-                    <h2>Diagnosis on Paper</h2>
+                    <h2>How a case runs</h2>
                 </div>
-                <p class="cs-intro-text">An adult ADHD assessment still runs on paper. The patient and a relative each fill in long questionnaires. The clinician adds up the answers by hand, looks up every sum in printed norm tables and compares the two views. That takes time, and one slip in a sum changes the result.</p>
+                <p class="cs-intro-text">The clinician opens a case and chooses the instruments. The patient and a relative each get a link and answer on their own phone, without an account or an app.</p>
 
-                <div class="gst-compare">
-                    <div class="gst-compare-head gst-compare-old">On paper</div>
-                    <div class="gst-compare-head gst-compare-new">In Gestalt</div>
-                    <div class="gst-compare-old">Forms handed out and collected by hand</div>
-                    <div class="gst-compare-new">One-time links, answered on a phone</div>
-                    <div class="gst-compare-old">Sums and norm tables worked out by hand</div>
-                    <div class="gst-compare-new">Scored the moment a form is submitted</div>
-                    <div class="gst-compare-old">Every instrument on its own sheet</div>
-                    <div class="gst-compare-new">All findings of a case in one overview</div>
-                </div>
+                <ol class="gst-steps">
+                    <li>
+                        <span>01</span>
+                        <h3>The clinician opens the case</h3>
+                        <p>They choose the instruments and send the links from their own email.</p>
+                    </li>
+                    <li>
+                        <span>02</span>
+                        <h3>Patient and relative answer</h3>
+                        <p>Each screen shows one question and nothing else, because the person answering is being assessed for attention problems.</p>
+                    </li>
+                    <li>
+                        <span>03</span>
+                        <h3>The results arrive scored</h3>
+                        <p>When the last form comes in, the T-scores, the validity checks and a draft report are ready.</p>
+                    </li>
+                </ol>
+
+                <figure class="gst-devices">
+                    <div class="gst-devices-stage">
+                        <img class="gst-devices-laptop" loading="lazy" decoding="async" width="2000" height="1320" src="../images/gestalt/gestalt-cases.webp" alt="Gestalt case list on a laptop, showing patients, form progress and next steps">
+                        <img class="gst-devices-phone" loading="lazy" decoding="async" width="720" height="1256" src="../images/gestalt/gestalt-patient-caars.webp" alt="Patient questionnaire on a phone with one question and four answer options">
+                    </div>
+                    <figcaption>The clinician's case list and a patient questionnaire</figcaption>
+                </figure>
             </section>
 
             <section class="cs-section">
-                <div class="cs-section-header">
-                    <span class="cs-section-line"></span>
-                    <h2>One Case, Three People</h2>
-                </div>
-                <div class="gst-flow">
-                    <div class="gst-flow-copy">
-                        <p class="cs-intro-text">The clinician opens a case and picks the instruments. Patient and relative each get a one-time link and answer on their own phone, with no account and no app.</p>
-                        <ol class="gst-steps">
-                            <li>
-                                <span>01</span>
-                                <div>
-                                    <h3>The clinician sets up the case</h3>
-                                    <p>They choose the instruments and send the links from their own email.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <span>02</span>
-                                <div>
-                                    <h3>Patient and relative answer</h3>
-                                    <p>One question per screen. The people answering are being assessed for attention difficulties, so nothing else competes for it.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <span>03</span>
-                                <div>
-                                    <h3>Results arrive scored</h3>
-                                    <p>T-scores, validity checks and a report draft are ready when the last form comes in.</p>
-                                </div>
-                            </li>
-                        </ol>
+                <div class="gst-instruments">
+                <div class="gst-instruments-head">
+                    <div class="cs-section-header">
+                        <span class="cs-section-line"></span>
+                        <h2>Every instrument has its own graphic</h2>
                     </div>
-                    <figure class="gst-stage gst-stage--phones">
-                        <figcaption><span>Fig. 02</span> Patient questionnaires</figcaption>
-                        <div class="gst-phones">
-                            <img loading="lazy" decoding="async" width="720" height="1256" src="../images/gestalt/gestalt-patient-caars.webp" alt="Patient questionnaire on a phone with one question and four answer options">
-                            <img loading="lazy" decoding="async" width="720" height="1256" src="../images/gestalt/gestalt-patient-wurs.webp" alt="Childhood questionnaire on a phone with one statement and five answer options">
-                        </div>
+                    <p class="cs-intro-text">Each instrument measures something different, so each has its own colour and its own way of showing a result. Clinicians recognise a result by its shape before they read the title.</p>
+                </div>
+
+                <div class="gst-cards">
+                    <figure>
+                        <img loading="lazy" decoding="async" width="570" height="393" src="../images/gestalt/gestalt-card-caars-self.webp" alt="Result card for the CAARS-L self-rating with a bar chart">
+                        <figcaption><i class="gst-swatch gst-swatch--caars-self"></i><strong>CAARS-L self-rating</strong> Bars for the eight scales</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" decoding="async" width="570" height="393" src="../images/gestalt/gestalt-card-caars-observer.webp" alt="Result card for the CAARS-L observer rating with a violet bar chart">
+                        <figcaption><i class="gst-swatch gst-swatch--caars-observer"></i><strong>CAARS-L observer rating</strong> The relative's view, with a validity warning</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" decoding="async" width="570" height="364" src="../images/gestalt/gestalt-card-wurs-k.webp" alt="Result card for the WURS-k with a ring chart">
+                        <figcaption><i class="gst-swatch gst-swatch--wurs"></i><strong>WURS-k</strong> A ring that sets the score against the cut-off</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" decoding="async" width="570" height="364" src="../images/gestalt/gestalt-card-diva-5.webp" alt="Result card for the DIVA-5 interview with rows of dots">
+                        <figcaption><i class="gst-swatch gst-swatch--diva"></i><strong>DIVA-5</strong> Dots for every criterion, in adulthood and childhood</figcaption>
                     </figure>
                 </div>
-            </section>
-
-            <section class="cs-section">
-                <div class="cs-section-header">
-                    <span class="cs-section-line"></span>
-                    <h2>Every Result in One View</h2>
-                </div>
-                <p class="cs-intro-text">The findings overview puts all instruments of a case side by side. The name Gestalt comes from here: the single results only mean something as a whole.</p>
-
-                <figure class="gst-stage">
-                    <figcaption><span>Fig. 03</span> Findings overview</figcaption>
-                    <img loading="lazy" decoding="async" width="2000" height="1320" src="../images/gestalt/gestalt-findings.webp" alt="Gestalt findings overview with result cards for four instruments">
-                </figure>
-
-                <div class="gst-notes">
-                    <div>
-                        <i class="gst-dot gst-dot--ink" aria-hidden="true"></i>
-                        <h3>One card per instrument</h3>
-                        <p>The key number first, the distribution second, the detail one scroll away.</p>
-                    </div>
-                    <div>
-                        <i class="gst-dot gst-dot--pair" aria-hidden="true"></i>
-                        <h3>Two colours, two voices</h3>
-                        <p>Blue is the patient and violet is the relative, on every screen.</p>
-                    </div>
-                    <div>
-                        <i class="gst-dot gst-dot--warn" aria-hidden="true"></i>
-                        <h3>Doubt stays visible</h3>
-                        <p>If answers look inconsistent, the card says so before anyone reads the score.</p>
-                    </div>
                 </div>
 
                 <div class="gst-pair">
-                    <figure class="gst-stage gst-stage--small">
-                        <figcaption><span>Fig. 04</span> T-score profile: both ratings on one scale</figcaption>
+                    <figure class="gst-shot">
                         <img loading="lazy" decoding="async" width="2000" height="1320" src="../images/gestalt/gestalt-tscore-profile.webp" alt="T-score profile comparing self-rating and observer rating on eight scales">
+                        <figcaption>CAARS-L T-score profile: self-rating and observer rating on one scale</figcaption>
                     </figure>
-                    <figure class="gst-stage gst-stage--small">
-                        <figcaption><span>Fig. 05</span> Clinical interview with a live summary</figcaption>
+                    <figure class="gst-shot">
                         <img loading="lazy" decoding="async" width="2000" height="1320" src="../images/gestalt/gestalt-diva-interview.webp" alt="Structured clinical interview with symptom criteria and a summary table">
+                        <figcaption>DIVA-5 interview: the summary fills in as the clinician works through the criteria</figcaption>
                     </figure>
                 </div>
 
-                <figure class="gst-stage gst-stage--dark">
-                    <div class="gst-dark-copy">
-                        <p class="gst-fig"><span>Fig. 06</span> Dark theme</p>
-                        <h3>Designed as a system</h3>
-                        <p>Every screen draws on one set of tokens for colour, type and spacing. Dark mode is a second theme on the same components.</p>
+                <div class="gst-system">
+                    <div>
+                        <h3>One design system, two themes</h3>
+                        <p>All screens use the same tokens for colour, type and spacing, so the dark theme needed no second design.</p>
                     </div>
                     <img loading="lazy" decoding="async" width="2000" height="1320" src="../images/gestalt/gestalt-findings-dark.webp" alt="Gestalt findings overview in the dark theme">
-                </figure>
+                </div>
             </section>
 
             <section class="cs-section">
                 <div class="cs-section-header">
                     <span class="cs-section-line"></span>
-                    <h2>Sensitive Data, Clear Rules</h2>
+                    <h2>Rules for patient data and AI</h2>
                 </div>
-                <p class="cs-intro-text">I built Gestalt with AI coding agents, and it handles class 4 client data: psychiatric health information. So the rules for AI and for data were set before the first screen was designed.</p>
+                <p class="cs-intro-text">Gestalt holds class 4 client data, which here means psychiatric health information. I built it with AI coding agents, so I set the rules for data and AI before I designed the first screen.</p>
 
                 <div class="gst-rules">
                     <div class="gst-rule gst-rule--lead">
                         <span class="gst-rule-label">Class 4 client data</span>
                         <h3>Encrypted end to end</h3>
-                        <p>Client data is encrypted end to end, from the patient's phone to the clinician's screen.</p>
+                        <p>Client data stays encrypted all the way from the patient's phone to the clinician's screen.</p>
                         <div class="gst-e2e" aria-hidden="true" translate="no">
                             <div class="gst-e2e-node"><i class="material-symbols-outlined">smartphone</i></div>
                             <div class="gst-e2e-line"><i class="material-symbols-outlined">lock</i></div>
@@ -253,22 +249,22 @@
                     <div class="gst-rule">
                         <i class="material-symbols-outlined" aria-hidden="true">terminal</i>
                         <div>
-                            <h3>AI writes code, it never reads patients</h3>
-                            <p>AI agents helped me write the software. The scoring is plain, deterministic code, tested against the official norm tables. No patient answer is sent to an AI model.</p>
+                            <h3>AI wrote code and never saw patient data</h3>
+                            <p>AI agents helped me write the software. The scoring is ordinary code that I tested against the official norm tables, and no patient answer goes to an AI model.</p>
                         </div>
                     </div>
                     <div class="gst-rule">
                         <i class="material-symbols-outlined" aria-hidden="true">stethoscope</i>
                         <div>
-                            <h3>The clinician decides</h3>
-                            <p>Gestalt scores, compares and suggests. The diagnosis is always the clinician's, and the interface labels its own output as a suggestion.</p>
+                            <h3>The clinician makes the diagnosis</h3>
+                            <p>Gestalt scores and compares. It marks its own output as a suggestion and leaves the diagnosis to the clinician.</p>
                         </div>
                     </div>
                     <div class="gst-rule">
                         <i class="material-symbols-outlined" aria-hidden="true">visibility_off</i>
                         <div>
                             <h3>As little data as possible</h3>
-                            <p>Patients need no account. A relative sees a first name and an initial. Billing shows no patient data, and every link works once.</p>
+                            <p>Patients need no account, a relative sees only a first name and an initial, and every link works once.</p>
                         </div>
                     </div>
                 </div>
@@ -277,30 +273,30 @@
             <section class="cs-section">
                 <div class="cs-section-header">
                     <span class="cs-section-line"></span>
-                    <h2>Built from Zero</h2>
+                    <h2>What I did</h2>
                 </div>
-                <p class="cs-intro-text">There was no team and no handover. Research, product decisions, design and code came from one desk, in close exchange with the professor.</p>
+                <p class="cs-intro-text">I built Gestalt from zero with a professor from Harvard and in collaboration with researchers from ETH Zurich. The research, the product decisions, the design and the code are my work.</p>
 
                 <div class="gst-built">
                     <div>
                         <span>Research</span>
-                        <p>Interviews with physicians about how an assessment really runs.</p>
+                        <p>Interviews with physicians about how an assessment runs in practice.</p>
                     </div>
                     <div>
                         <span>Product</span>
-                        <p>Case flow, roles, instrument licences and billing per form.</p>
+                        <p>The case flow, the roles and billing per form.</p>
                     </div>
                     <div>
                         <span>Design</span>
-                        <p>A design system with two themes and its own data visualisation.</p>
+                        <p>One design system, two themes and a graphic for each instrument.</p>
                     </div>
                     <div>
                         <span>Engineering</span>
-                        <p>Next.js and TypeScript, with a scoring engine for every instrument.</p>
+                        <p>The full app in Next.js and TypeScript, including the scoring for every instrument.</p>
                     </div>
                 </div>
 
-                <p class="gst-status"><strong>Where it stands.</strong> Gestalt is in a private test phase with clinicians. Instruments without a cleared licence run as previews only. That is the "Vorschau" label in some of the screens above.</p>
+                <p class="gst-status">Gestalt is currently in a private test with clinicians. Instruments whose licence is still open run as a preview, which is why some screens carry the label "Vorschau".</p>
             </section>
         </div>
     </main>
