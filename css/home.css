@@ -179,3 +179,24 @@ body,
 
 /* footer */
 .main-footer{border-top:2.5px solid var(--color-black)}
+
+/* --- hero role switcher: monochrome glitch ------------------
+   main.js swaps the highlighted role every 3s, scrambles the
+   letters and adds .is-glitching for one burst of slices. --- */
+.hero h1 .highlight.is-glitching{animation:role-glitch .52s steps(1,end)}
+@keyframes role-glitch{
+  0%  {clip-path:inset(0 0 0 0);text-shadow:3px 0 #9a9a9a,-3px 0 rgba(255,255,255,.6)}
+  12% {clip-path:inset(18% 0 52% 0);text-shadow:-4px 0 #9a9a9a,4px 0 rgba(255,255,255,.6);filter:invert(1)}
+  24% {clip-path:inset(62% 0 6% 0);text-shadow:5px 0 #9a9a9a,-2px 0 rgba(255,255,255,.6);filter:none}
+  36% {clip-path:inset(4% 0 72% 0);text-shadow:-2px 0 #9a9a9a,3px 0 rgba(255,255,255,.6)}
+  48% {clip-path:inset(38% 0 28% 0);filter:invert(1)}
+  60% {clip-path:inset(0 0 0 0);text-shadow:2px 0 #9a9a9a,-2px 0 rgba(255,255,255,.6);filter:none}
+  72% {clip-path:inset(70% 0 0 0)}
+  84% {clip-path:inset(0 0 0 0);text-shadow:-1px 0 #9a9a9a,1px 0 rgba(255,255,255,.6)}
+  100%{clip-path:none;text-shadow:none;filter:none}
+}
+
+/* --- "AI Augmented" flag on the own AI projects --- */
+.project-flag{position:absolute;top:0;left:0;padding:5px 9px;background:var(--color-black);
+  color:var(--color-white);font-family:var(--font-mono);font-size:10px;font-weight:700;
+  line-height:1;letter-spacing:.6px;text-transform:uppercase}

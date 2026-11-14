@@ -10,7 +10,54 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollAnimations();
     initSmoothScroll();
     initRotatingText();
+    initRoleGlitch();
 });
+
+// ========================================
+// Hero role switcher (glitch)
+// ========================================
+function initRoleGlitch() {
+    const el = document.querySelector('.hero h1 .highlight');
+    if (!el || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const roles = ['Product Design Leader', 'User Experience Leader', 'AI Business Specialist'];
+    // English reads "a … leader" but "an AI …": the article is the text right before the span
+    const article = el.previousSibling;
+    const hasArticle = article && article.nodeType === Node.TEXT_NODE && /\ban? $/.test(article.textContent);
+    const noise = '█▓▒░<>/_#';
+    const glitchMs = 520;
+    let index = 0;
+
+    function scrambleTo(target) {
+        const start = performance.now();
+        function frame(now) {
+            const p = Math.min((now - start) / glitchMs, 1);
+            const revealed = Math.floor(p * target.length);
+            let out = '';
+            for (let i = 0; i < target.length; i++) {
+                out += i < revealed || target[i] === ' '
+                    ? target[i]
+                    : noise[Math.floor(Math.random() * noise.length)];
+            }
+            el.textContent = out;
+            if (p < 1) requestAnimationFrame(frame);
+        }
+        frame(start); // first frame now, so the word changes together with the article
+    }
+
+    setInterval(() => {
+        index = (index + 1) % roles.length;
+        const next = roles[index];
+        if (hasArticle) {
+            // "an" only for "AI …"; "user" takes "a"
+            article.textContent = article.textContent.replace(/\ban? $/, next.startsWith('AI') ? 'an ' : 'a ');
+        }
+        el.classList.remove('is-glitching');
+        void el.offsetWidth; // restart the animation
+        el.classList.add('is-glitching');
+        scrambleTo(next);
+    }, 3000);
+}
 
 // ========================================
 // Mobile Navigation

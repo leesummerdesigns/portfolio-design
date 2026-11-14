@@ -404,7 +404,7 @@ def patch_common(text, en_path, de_path, lang):
                           lambda mm: f'{mm.group(1)}\n{mm.group(2)}<link rel="stylesheet" href="{href}">', text, count=1)
         if not n:
             text = text.replace('</head>', f'    <link rel="stylesheet" href="{href}">\n</head>', 1)
-    text = re.sub(r'(js/main\.js)\?v=\d+', r'\1?v=4', text)
+    text = re.sub(r'(js/main\.js)\?v=\d+', r'\1?v=6', text)
     return text
 
 

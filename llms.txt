@@ -12,11 +12,19 @@
 - Founder of: UX Academy
 - Experience includes: Swiss Marketplace Group, Cocomore (client projects for Rabobank and BD Rowa), Rakuten Kobo, Deutsche Telekom
 - Recognition: Red Dot Design Award 2018 (tolino epos)
+- AI experience: brought AI features into live products at Swiss Marketplace Group (90% of users who generated a listing description kept the text); builds AI augmented products: Cortex, BloodLog, Gestalt
+- Studies: part of the first Swiss cohort for the AI Business Specialist professional bachelor at IFA in Zurich, due 2027
 
 ## Selected results
 
 - Swiss Marketplace Group: led 10 designers across three brands; raised listing funnel completion from 48% to 72%; increased design velocity by 70% with a shared design system; raised take rate by 48%
 - Rakuten Kobo: led a shared design system adopted by 37 product teams
+
+## AI Augmented Projects
+
+- [Cortex](https://louishenrich.com/pages/cortex.html): open-source macOS app that gives AI assistants a shared memory from Markdown notes
+- [BloodLog](https://louishenrich.com/pages/bloodlog.html): iOS app on the App Store that explains lab results with AI
+- [Gestalt](https://louishenrich.com/pages/adhd-diagnostics.html): ADHD diagnostic workflow tool for physicians, in development
 
 ## Pages
 
